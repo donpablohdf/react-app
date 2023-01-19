@@ -1,4 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ignore all files starting with .
+.*
 
 # dependencies
 /node_modules
