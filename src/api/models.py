@@ -1,6 +1,5 @@
 import __future__
 from mailjet_rest import Client
-import requests
 import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey, Sequence, DateTime, update, desc, func
@@ -12,11 +11,6 @@ from os import remove
 
 from datetime import datetime, timedelta
 
-
-# import base64
-# from email.mime.multipart import MIMEMultipart
-# from email.mime.text import MIMEText
-# import smtplib
 
 
 API_KEY = os.getenv("MAILJET_KEY")
