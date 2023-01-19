@@ -1,0 +1,19 @@
+[uwsgi]
+plugins = python310
+http-timeout = 86400
+route-host = ^24\.199\.98\.33:3001 last:
+wsgi-file = /var/www/react-app/src/wsgi.py
+route = ^/ last:
+route = ^/([a-z]+) last:
+route = ^/([a-z]+)/([a-z]+)/([0-9]+) last:
+route = ^/([a-z]+)/([a-z]+)/([0-9]+)/([0-9]+) last:
+route = ^/([a-z]+)/([a-z]+)/([0-9]+)/([a-z]+) last:
+
+
+master = true
+processes = 5
+threads = 2
+
+vacuum = true
+
+die-on-term = true
